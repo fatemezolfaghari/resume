@@ -7,6 +7,7 @@ app_name = 'cv'
 urlpatterns = [
     path('', cv_view, name='index'),
     path('about', about_view, name='about'),
-    path('contact', contact_view, name='contact')
+    path('contact', contact_view, name='contact'),
+    path('portfolio', portfolio_view, name='portfolio')
 ]
 

@@ -9,4 +9,8 @@ def about_view(request):
 
 
 def contact_view(request):
-    return render(request, 'cv/contact.html')     
+    return render(request, 'cv/contact.html')
+
+
+def portfolio_view(request):
+    return render(request, 'cv/portfolio.html')    
