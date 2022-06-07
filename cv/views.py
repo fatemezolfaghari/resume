@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def cv_view(request):
-    return render(request, 'index.html')
+    return render(request, 'cv/index.html')
+
+
+def about_view(request):
+    return render(request, 'cv/about.html')    
