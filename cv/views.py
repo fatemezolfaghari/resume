@@ -14,3 +14,7 @@ def contact_view(request):
 
 def portfolio_view(request):
     return render(request, 'cv/portfolio.html')    
+
+
+def resume_view(request):
+    return render(request, 'cv/resume.html')    
