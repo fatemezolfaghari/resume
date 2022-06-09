@@ -1,3 +1,4 @@
+import email
 from django.shortcuts import render
 
 def cv_view(request):
@@ -17,4 +18,11 @@ def portfolio_view(request):
 
 
 def resume_view(request):
-    return render(request, 'cv/resume.html')    
+    return render(request, 'cv/resume.html')  
+
+
+def contact_store_view(request):
+    data = {
+        'message': "Message sent successfully"
+    }
+    return render(request, 'cv/contact.html', context= data)

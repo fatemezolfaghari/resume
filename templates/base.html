@@ -49,11 +49,16 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="resume">Resume</a></li>
-          <li><a href="portfolio">Portfolio</a></li>
-          <li><a href="contact">Contact</a></li>
+          {% url 'cv:index' as home_url %}
+          {% url 'cv:about' as about_url %}
+          {% url 'cv:resume' as resume_url %}
+          {% url 'cv:portfolio' as portfolio_url %}
+          {% url 'cv:contact' as contact_url %}
+          <li><a {% if request.get_full_path == home_url %} class="active" {% endif %} href="{% url 'cv:index' %}">Home</a></li>
+          <li><a {% if request.get_full_path == about_url %} class="active" {% endif %} href="{% url 'cv:about' %}">About</a></li>
+          <li><a {% if request.get_full_path == resume_url %} class="active" {% endif %} href="{% url 'cv:resume' %}">Resume</a></li>
+          <li><a {% if request.get_full_path == portfolio_url %} class="active" {% endif %} href="{% url 'cv:portfolio' %}">Portfolio</a></li>
+          <li><a {% if request.get_full_path == contact_url %} class="active" {% endif %} href="{% url 'cv:contact' %}">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
